@@ -1,0 +1,99 @@
+@media (max-width: 576px) {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+  .title{
+    font-family: 'Inter', sans-serif;
+    font-size: 70px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+  .word{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    position: absolute;
+    right: 10px;
+  }
+
+}
+@media (min-width: 576px) {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+  .title{
+    font-family: 'Inter', sans-serif;
+    font-size: 140px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+  .word{
+    font-size: 70px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+  }
+
+}
+@media (min-width: 768px) {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+  .title{
+    font-family: 'Inter', sans-serif;
+    font-size: 144px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+  .word{
+    font-size: 100px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+  }
+
+}
+@media (min-width: 992px) {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+.title{
+  font-family: 'Inter', sans-serif;
+  font-size: 144px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.word{
+  font-size: 100px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+}
+
+}
+@media (min-width: 1200px) {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+.title{
+  font-family: 'Inter', sans-serif;
+  font-size: 180px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.word{
+  font-size: 144px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+}
+
+}
