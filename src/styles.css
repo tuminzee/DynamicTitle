@@ -1,9 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  overflow:hidden;
+}
+body:not(.dark-mode-preloading) {
+  transition: all .33s linear;
+}
+.h-container{
+  display: flex;
+  justify-content: space-between;
+}
+.toggle{
+  margin: 10px;
+}
 
-*{
-  margin: 0;
-  padding: 0;
+
+/* STRAT Dark Mode Config */
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: white;
+}
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #FFF500;
+}
+.word{
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+body.light-mode{
   background: #FFF500;
-  overflow: hidden;
+  padding: 0;
+}
+body.dark-mode{
+  background: #000;
+  padding: 0;
+}
+.dark-mode .title{
+  color:#FFF500;
+}
+.light-mode .title{
+  color: #000;
+}
+/* END Dark Mode Config */
 
+
+.title{
+  font-family: 'Inter', sans-serif;
+  -webkit-text-stroke-width: 0px;
+}
+.word{
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 576px) {
+  .title{
+    font-size: 70px;
+  }
+  .word{
+    font-size: 50px;
+  }
+}
+@media (min-width: 576px) {
+  .title{
+    font-size: 140px;
+  }
+  .word{
+    font-size: 70px;
+    bottom: 10px;
+  }
+}
+@media (min-width: 768px) {
+    .title{
+      font-size: 144px;
+    }
+    .word{
+      font-size: 100px;
+      bottom: 10px;
+    }
+}
+@media (min-width: 992px) {
+  .title{
+    font-size: 144px;
+  }
+  .word{
+    font-size: 100px;
+    bottom: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .title{
+    font-family: 'Inter', sans-serif;
+    font-size: 170px;
+  }
+  .word{
+    font-size: 144px;
+  }
 }

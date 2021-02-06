@@ -5,6 +5,8 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 import { Word } from './services/word';
 import { WordService } from './services/word.service';
 import Speech from 'speak-tts'
+import { Observable } from 'rxjs';
+import { DarkModeService } from "angular-dark-mode";
 
 
 
@@ -14,9 +16,17 @@ import Speech from 'speak-tts'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
+  isChecked = true;
   word: string = '';
   speech: any;
- public constructor(private titleService: Title, private wordsService: WordService) {}
+
+  public constructor(
+    private titleService: Title,
+    private wordsService: WordService,
+    private darkModeService: DarkModeService)
+    {}
+
   ngOnInit() {
     this.generateTitle();
     this.speech = new Speech();
@@ -39,7 +49,7 @@ export class AppComponent implements OnInit{
                   }
               }
         });
-  }
+  };
 
   generateTitle(){
     setInterval(() => {
@@ -49,14 +59,19 @@ export class AppComponent implements OnInit{
        this.titleService.setTitle(this.word);
        this.speech.speak({
         text: this.word,
-    }).then(() => {
-        console.log("Success !")
-    }).catch(e => {
-        console.error("An error occurred :", e)
-    })
+          }).then(() => {
+              console.log("Success !")
+          }).catch(e => {
+              console.error("An error occurred :", e)
+          })
       })
     }, 2000)
-  }
+  };
+
+
+  onToggle(): void {
+    this.darkModeService.toggle();
+  };
 
 
 

@@ -1,11 +1,16 @@
-<div class="title">
+<div class="h-container">
+  <div class="title">
     Random
     <br>
     Generated
     <br>
     Titles
+  </div>
+  <mat-slide-toggle class="toggle" [checked]="darkMode$ | async"
+  (change)="onToggle()" [(ngModel)]="isChecked"></mat-slide-toggle>
 </div>
-
 <div class="word">
   {{word}}
 </div>
+
+
